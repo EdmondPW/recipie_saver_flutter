@@ -4,19 +4,15 @@ import "package:recipie_saver_flutter/logic/AuthLogic.dart";
 
 class ResponsiveLayout extends StatelessWidget {
   final Widget MobileLoginScaffold;
-  final Widget TabletLoginScaffold;
   final Widget DesktopLoginScaffold;
 
   final Widget MobileAppPage;
-  final Widget TabletAppPage;
   final Widget DesktopAppPage;
 
   ResponsiveLayout(
       {required this.MobileLoginScaffold,
-      required this.TabletLoginScaffold,
       required this.DesktopLoginScaffold,
       required this.MobileAppPage,
-      required this.TabletAppPage,
       required this.DesktopAppPage});
 
   @override
@@ -34,8 +30,6 @@ class ResponsiveLayout extends StatelessWidget {
               }
             },
           );
-        } else if (constraints.maxWidth < 1100) {
-          return TabletLoginScaffold;
         } else {
           return DesktopLoginScaffold;
         }

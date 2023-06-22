@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:recipie_saver_flutter/responsive/pages/AppPages/DesktopAppPage.dart';
 import 'package:recipie_saver_flutter/responsive/pages/AppPages/MobileAppPage.dart';
-import 'package:recipie_saver_flutter/responsive/pages/AppPages/TabletAppPage.dart';
 import 'package:recipie_saver_flutter/responsive/pages/loginPages/DesktopLoginScaffolding.dart';
 import 'package:recipie_saver_flutter/responsive/pages/loginPages/MobileLoginScaffolding.dart';
-import 'package:recipie_saver_flutter/responsive/pages/loginPages/TabletLoginScaffolding.dart';
 import 'package:recipie_saver_flutter/responsive/responsive_layout.dart';
 import 'package:recipie_saver_flutter/static/ColorConfig.dart';
 
@@ -46,10 +44,8 @@ class MainApp extends StatelessWidget {
       ),
       home: ResponsiveLayout(
         MobileLoginScaffold: const MobileLoginScaffolding(),
-        TabletLoginScaffold: const TabletLoginScaffolding(),
         DesktopLoginScaffold: const DesktopLoginScaffolding(),
         MobileAppPage: const MobileAppPage(),
-        TabletAppPage: const TabletAppPage(),
         DesktopAppPage: const DesktopAppPage(),
       ),
     );

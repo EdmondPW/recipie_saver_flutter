@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "386010937516",
+    "project_id": "recipe-saver-flutter",
+    "storage_bucket": "recipe-saver-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386010937516:android:bf3dd82aad35f119614709",
+        "android_client_info": {
+          "package_name": "com.example.recipie_saver_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "386010937516-3qftpg8cbthnr7aiuhmlcbji3fb9n6dn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC35610cT2nm0w8rTzVzvXhGjniTl_2cB0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "386010937516-3qftpg8cbthnr7aiuhmlcbji3fb9n6dn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

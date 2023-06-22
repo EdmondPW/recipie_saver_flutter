@@ -1,0 +1,31 @@
+name: recipie_saver_flutter
+description: A new Flutter project.
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ">=2.19.6 <3.0.0"
+
+dependencies:
+  cloud_firestore: ^4.8.0
+  firebase_auth: ^4.6.2
+  firebase_core: ^2.13.1
+  firebase_ui_auth: ^1.4.2
+  flutter:
+    sdk: flutter
+  http: ^0.13.6
+  flutter_riverpod: ^2.3.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/image/icons/logo-iResep-opening-page.png
+    - assets/image/icons/logo-iResep-big.png
+    - assets/image/large-screen-images/ilustrasi-web.png
+    - assets/image/large-screen-images/logo-web.png
+    - assets/image/mobile-screen-images/ilustrasi-mobile-01.png

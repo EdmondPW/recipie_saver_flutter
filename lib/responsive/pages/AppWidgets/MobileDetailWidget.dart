@@ -56,6 +56,9 @@ class _MobileDetailWidgetState extends ConsumerState<MobileDetailWidget> {
                     'Favorite',
                     AuthLogic().currentUser!.uid.toString(),
                     'recipe${widget.result.id}');
+                ref
+                    .read(FavoritetateProvider.notifier)
+                    .update((state) => !state);
                 setState(() {
                   isFavorite = !isFavorite;
                 });

@@ -14,6 +14,10 @@ final indexPageStateProvider = StateProvider<int>((ref) {
   return 0;
 });
 
+final FavoritetateProvider = StateProvider<bool>((ref) {
+  return false;
+});
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(

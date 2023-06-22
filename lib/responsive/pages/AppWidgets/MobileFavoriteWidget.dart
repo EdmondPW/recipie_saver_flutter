@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:recipie_saver_flutter/logic/AuthLogic.dart';
 import 'package:recipie_saver_flutter/logic/FirebaseFavoriteRecipeLogic.dart';
 import 'package:recipie_saver_flutter/logic/RecipeModel.dart';
+import 'package:recipie_saver_flutter/main.dart';
 
 import '../../../static/RecipeCard.dart';
 
-class MobileFavoriteWidget extends StatefulWidget {
+class MobileFavoriteWidget extends ConsumerStatefulWidget {
   const MobileFavoriteWidget({super.key});
 
   @override
-  State<MobileFavoriteWidget> createState() => _MobileFavoriteWidgetState();
+  ConsumerState<MobileFavoriteWidget> createState() =>
+      _MobileFavoriteWidgetState();
 }
 
-class _MobileFavoriteWidgetState extends State<MobileFavoriteWidget> {
+class _MobileFavoriteWidgetState extends ConsumerState<MobileFavoriteWidget> {
   List<Results> recipes = [];
 
   @override
@@ -31,6 +34,11 @@ class _MobileFavoriteWidgetState extends State<MobileFavoriteWidget> {
 
   @override
   Widget build(BuildContext context) {
+    // final FavoriteState = ref.watch(FavoritetateProvider);
+    ref.listen<bool>(FavoritetateProvider, (bool? previousBool, bool newBool) {
+      print("new bool $newBool");
+      fetchRecipes();
+    });
     return Column(
       children: [
         (recipes.isNotEmpty)
@@ -52,7 +60,7 @@ class _MobileFavoriteWidgetState extends State<MobileFavoriteWidget> {
                   },
                 ),
               )
-            : const Text("No Favorite"),
+            : const Text("No Favorite data"),
       ],
     );
   }
